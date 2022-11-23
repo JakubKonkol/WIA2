@@ -1,16 +1,20 @@
-org 0x100
-; a/b + c = 
+org 100h
+;a/b*c = abc/*
+
 push word [a]
 push word [b]
-pop BX
+push word [c]
+
 pop AX
+POP BX
+pop CX
+
 mov DX, 0000h
 div BX
 push AX
-push word [c]
-pop AX
-pop BX
-add AX, BX
+
+mov DX, 0000h
+mul CX
 push AX
 
 mov AX, 4C00h

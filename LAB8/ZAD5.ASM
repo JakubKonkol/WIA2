@@ -1,16 +1,14 @@
-org 0x100
-; a/b + c = 
-push word [a]
+org 100h
+
 push word [b]
+push word [a]
 pop BX
 pop AX
-mov DX, 0000h
-div BX
+mul BX
 push AX
 push word [c]
-pop AX
 pop BX
-add AX, BX
+div BX
 push AX
 
 mov AX, 4C00h
