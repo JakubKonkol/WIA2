@@ -32,3 +32,4 @@ int 21h
 a dw 02h
 b dw 04h
 c dw 06h
+y dw 00h
